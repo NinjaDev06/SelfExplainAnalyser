@@ -53,10 +53,8 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SelfExplainAnalyser\SelfExplainAnalyser.csproj">
-      <Project>{11874E38-9581-4993-AA09-C4088CAABA8D}</Project>
-      <Name>Analyzer1</Name>
-      <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bBuiltProjectOutputGroupDependencies%3bGetCopyToOutputDirectoryItems%3bSatelliteDllsProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
-      <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
+      <Project>{4E0B1B78-54A8-434A-9A16-204D6D612DAF}</Project>
+      <Name>SelfExplainAnalyser</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
