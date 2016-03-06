@@ -11,14 +11,14 @@ using Microsoft.CodeAnalysis.Diagnostics;
 namespace SelfExplainAnalyser
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    public class ThisAnalyzer : DiagnosticAnalyzer
+    public class ThisPropertyAnalyzer : DiagnosticAnalyzer
     {
-        public const string DiagnosticId = "ThisAnalyzer";
-        internal static readonly LocalizableString Title = "ThisAnalyzer Title";
-        internal static readonly LocalizableString MessageFormat = "Missing a this '{0}'";
-        internal const string Category = "ThisAnalyzer Category";
+        public const string DiagnosticId = "SE0001";
+        internal static readonly LocalizableString Title = "All access of properties must begin with the keyword this";
+        internal static readonly LocalizableString MessageFormat = "The keyword this is missing for a call on the property '{0}'";
+        internal const string Category = "Missing this keyword";
 
-        public ThisAnalyzer()
+        public ThisPropertyAnalyzer()
         {
             this.PropertyNames = new HashSet<string>();
         }

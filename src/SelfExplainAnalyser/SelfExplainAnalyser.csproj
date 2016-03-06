@@ -34,7 +34,7 @@
   <ItemGroup>
     <Compile Include="CodeFixThis.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ThisAnalyzer.cs" />
+    <Compile Include="ThisPropertyAnalyzer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Diagnostic.nuspec">

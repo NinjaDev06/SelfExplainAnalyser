@@ -12,7 +12,7 @@ using TestHelper;
 namespace SelfExplainAnalyser.Test
 {
     [TestClass]
-    public class ThisAnalyzerTests : CodeFixVerifier
+    public class ThisPropertyAnalyzerTests : CodeFixVerifier
     {
         [TestMethod]
         public void PropertySetterMissingThis()
@@ -247,15 +247,15 @@ namespace SelfExplainAnalyser.Test
 
         protected override DiagnosticAnalyzer GetCSharpDiagnosticAnalyzer()
         {
-            return new ThisAnalyzer();
+            return new ThisPropertyAnalyzer();
         }
 
         private DiagnosticResult GetExpectedDiagnosticResult(string name, int line, int column)
         {
             return new DiagnosticResult
             {
-                Id = "ThisAnalyzer",
-                Message = String.Format("Missing a this '{0}'", name),
+                Id = "SE0001",
+                Message = String.Format("The keyword this is missing for a call on the property '{0}'", name),
                 Severity = DiagnosticSeverity.Warning,
                 Locations =
                     new[] {

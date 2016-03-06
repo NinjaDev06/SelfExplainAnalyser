@@ -22,7 +22,7 @@ namespace SelfExplainAnalyser
 
         public sealed override ImmutableArray<string> FixableDiagnosticIds
         {
-            get { return ImmutableArray.Create(ThisAnalyzer.DiagnosticId); }
+            get { return ImmutableArray.Create(ThisPropertyAnalyzer.DiagnosticId); }
         }
 
         public sealed override FixAllProvider GetFixAllProvider()
